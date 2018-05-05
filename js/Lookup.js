@@ -29,10 +29,11 @@ function doo(i){
     document.getElementById('timezone').innerHTML = "Timezone: " + i.location.time_zone;
     document.getElementById('flag').src = "https://storage.googleapis.com/ip-flags/" + i.country.code.toLowerCase() + ".png"
     if ( i.country.name.length < 8 ) {
-       document.getElementById('flag').style.marginLeft = '1px'
+       document.getElementById('flag').style.marginLeft = '0px'
     } else {
-      document.getElementById('flag').style.marginLeft = '33px'
+      document.getElementById('flag').style.marginLeft = '42px'
     };
+
     var old = document.createElement('script')
     old.src = 'https://ip.nf/' + i.ip + '.json?callback=lee';
     document.body.appendChild(old);
