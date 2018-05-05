@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="min-width:200px;">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <title>CityIP</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <script type="text/javascript" src="js/Lookup.js"></script>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    </style>
+    <body>
+
+      <div id="navbar" >
+        <ul class="nav">
+          <li> <a href="index.html">Home</a>
+
+        </li>
+        <li><a href="Lookup.html">IP Lookup</a>
+        </li>
+      </ul>
+        </div>
+        <div id="section-1" class="grid">
+          <h1 id="YourIP" ><center></center></h1>
+        </div>
+        <div class="map">
+          <iframe id="map" class="grid">
+
+          </iframe>
+</div>
+
+
+      <div id="section-2" class="grid">
+
+          <h2 id="title" class="right">IP Details<center></center> </h2>
+
+          <p id="ip" class="table-left-col" style="text-align: left"><center></center> </p>
+          <p id="City" class="table-left-col" style="text-align: left"><center></center> </p>
+
+
+          <p id="Country1" class="table-left-col" style="text-align: left">Country: <center></center> </p>
+          <img id="flag" src="" class="table-left-col" style="text-align: left"/>
+          <p id="Country" class="table-left-col" style="text-align: left"><center></center> </p>
+          <p id="timezone" class="table-left-col" style="text-align: left"><center></center> </p>
+          <p id="isp1" class="table-left-col" style="text-align: left"><center></center> </p>
+
+
+        </div>
+        <div id="button">
+          <input type="text" id="search" onkeypress="lookup(this)" />
+              <button onclick="doo(); lee();" id="btn">Lookup</button>
+</div>
+        <div class="footer">
+               <p id="copyright"></p>
+             </div>
+             <script>
+var d = new Date()
+CopyrightText = "Copyright &#169; "
+CityIP = " CityIP"
+document.getElementById('copyright').innerHTML += CopyrightText
+document.getElementById('copyright').innerHTML += d.getFullYear()
+document.getElementById('copyright').innerHTML += CityIP
+</script>
+
+
+
+  </body>
+</html>
