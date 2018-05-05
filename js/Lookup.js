@@ -31,7 +31,7 @@ function doo(i){
     if ( i.country.name.length < 8 ) {
        document.getElementById('flag').style.marginLeft = '1px'
     } else {
-      document.getElementById('flag').style.marginLeft = '30px'
+      document.getElementById('flag').style.marginLeft = '33px'
     };
     var old = document.createElement('script')
     old.src = 'https://ip.nf/' + i.ip + '.json?callback=lee';
