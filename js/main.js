@@ -11,17 +11,17 @@ document.body.appendChild(deep);
 
 
 function doo(i){
-  document.getElementById('ip').innerHTML = "IP: " + i.ip;
-  document.getElementById('Country').innerHTML = " " + i.country.name;
-  document.getElementById('City').innerHTML = "City: " + i.city;
-  document.getElementById('timezone').innerHTML = "Timezone: " + i.location.time_zone;
+  document.getElementById('ip').innerHTML = "" + i.ip;
+  document.getElementById('Country').innerHTML = "" + i.country.name;
+  document.getElementById('City').innerHTML = "" + i.city;
+  document.getElementById('timezone').innerHTML = "" + i.location.time_zone;
   document.getElementById('flag').src = "https://storage.googleapis.com/ip-flags/" + i.country.code.toLowerCase() + ".png"
 
   var old = document.createElement('script')
   old.src = 'https://ip.nf/' + i.ip + '.json?callback=lee';
   document.body.appendChild(old);
 
-
+  
 }
 function simpleip(data) {
   document.getElementById('YourIP').innerHTML = "Your IP Address is: " + data.ip;
@@ -31,7 +31,7 @@ function simpleip(data) {
 }
 
 function lee(i) {
- document.getElementById('isp1').innerHTML = "ISP: " + i.ip.asn;
+ document.getElementById('isp1').innerHTML = "" + i.ip.asn;
 }
 
 doo()

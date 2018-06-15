@@ -39,32 +39,7 @@ li  {
     padding: left
 }
 
-#section-2 {
-  display: inline-grid;
-  align-items: auto;
-  border: solid;
-  border-width: 2px;
-  padding: 3%;
 
-  font-family: "Roboto", Times, serif;
-  font-size: 17px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -3em;
-  margin-left: -8em;
-}
-
-#section-2 #Country {
-
-  margin-left: 4em;
-  margin-top: -20px;
-}
-#section-2 #flag {
-
-  margin-left: 8em;
-  margin-top: -15px;
-}
 
 a:link    {
   color: #ffffff
@@ -86,94 +61,7 @@ a:active  {
       color: white;
       padding-top: 1em;
       text-align: center;
-      height: 30px;
+      height: 50px;
   }
 
 
-  @media screen and (max-height: 900px) {
-    #section-2 {
-      margin-top: 40px;
-      padding: 1%;
-    }
-    #map {
-      height: 10em;
-    }
-  }
-  @media screen and (min-height: 700px) {
-    #section-2 {
-      margin-top: 30px;
-    }
-    #map {
-      height: 16em;
-    }
-  }
-
-  @media screen and (min-width: 700px) , screen and (max-height: 800px) { {
-   .grid {
-     display: grid;
-     grid-template-columns: 1fr repeat(2, minmax(auto,1em ));
-
-
-   }
-
-   #section-2 {
-     display: grid;
-    grid-template-columns: repeat(1, minmax(auto,10em ));
-    grid-column-gap: 1em;
-    padding: 2%;
-    margin-left: -180px;
-    margin-top: -3em;
-    }
-   #section-2 #City {
-     display: grid;
-    grid-column: 1 / 2;
-     grid-row: 2;
-    margin-left: 3em;
-
-   }
-
-   #section-2 #timezone {
-
-    grid-column: 2 / 2;
-    grid-row: 4;
-   }
-   #section-2 #Country1 {
-
-    grid-column-gap: 1em;
-    grid-column: 2 / 2;
-    grid-row: 3;
-   }
-   #section-2 #Country {
-
-    grid-column-gap: 3em;
-    grid-column: 2 / 2;
-    grid-row: 3;
-    margin-left: -4em;
-    margin-top: -0px;
-   }
-   #section-2 #flag {
-
-    grid-column: 2 / 2;
-    grid-row: 3;
-    margin-left: 0px;
-    margin-top: 5px;
-   }
-
-   #section-2 #ip{
-    margin-top: 2em;
-    }
-   .table-left-col {
-     margin-left: -8em;
-   }
-
-
-  .map {
-	position: relative;
-  max-width: 60%;
-  margin: 0 auto;
-  }
-  #map {
-    position: absolute;
-    width: 100%;
-    height: 18em;
-  }

@@ -17,23 +17,23 @@ function doo(i){
 
     first_click = true;
   } else {
-    document.getElementById('section-2').style.visibility = "visible";
-    document.getElementById('section-2').style.visibility = "display";
+    document.getElementById('all').style.visibility = "visible";
+    document.getElementById('all').style.visibility = "display";
     var input = document.getElementById('search')
     var lookup = document.createElement('script')
     lookup.src = 'https://geoip.nekudo.com/api/' + input.value + '/?callback=doo'
     document.body.appendChild(lookup);
-    document.getElementById('ip').innerHTML = "IP: " + i.ip;
-    document.getElementById('Country').innerHTML = " " + i.country.name;
-    document.getElementById('City').innerHTML = "City: " + i.city;
-    document.getElementById('timezone').innerHTML = "Timezone: " + i.location.time_zone;
+    document.getElementById('ip').innerHTML = "" + i.ip;
+    document.getElementById('Country').innerHTML = "" + i.country.name;
+    document.getElementById('City').innerHTML = "" + i.city;
+    document.getElementById('timezone').innerHTML = "" + i.location.time_zone;
     document.getElementById('flag').src = "https://storage.googleapis.com/ip-flags/" + i.country.code.toLowerCase() + ".png"
     if ( i.country.name.length < 8 ) {
        document.getElementById('flag').style.marginLeft = '0px'
     } else {
       document.getElementById('flag').style.marginLeft = '42px'
     };
-
+    document.getElementById('isp1').innerHTML = "Not Found"
     var old = document.createElement('script')
     old.src = 'https://ip.nf/' + i.ip + '.json?callback=lee';
     document.body.appendChild(old);
@@ -45,6 +45,6 @@ function doo(i){
 }
 
 function lee(i) {
- document.getElementById('isp1').innerHTML = "ISP: " + i.ip.asn;
+ document.getElementById('isp1').innerHTML = "" + i.ip.asn;
  lee = empty;
 }
